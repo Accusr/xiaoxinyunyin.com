@@ -1,14 +1,7 @@
 module.exports = {
-  publicPath: './',
-  // proxyTable:{
-  //   '/api':{
-  //     target:'http://localhost:9011',
-  //     changeOrigin:true,
-  //     pathRewrite:{
-  //       '^/api': 'http://localhost:9011',
-  //     }
-  //   }
-  // },
+  publicPath: '/',
+
+
   css:{
     loaderOptions: {
       less: {
@@ -16,5 +9,18 @@ module.exports = {
         }
 
       }
+    },
+
+  pluginOptions: {
+    webpackBundleAnalyzer: {
+      openAnalyzer: false,
+      analyzerPort: 1234
     }
-  }
+  },
+
+  outputDir: undefined,
+  assetsDir: undefined,
+  runtimeCompiler: undefined,
+  productionSourceMap: undefined,
+  parallel: undefined
+}

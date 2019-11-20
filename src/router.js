@@ -6,7 +6,9 @@ Vue.use(Router)
 
 
 export default new Router({
+  mode: 'history',
   routes: [
+    { path: '*', component: Home },
     {
       path: '/',
       name: 'home',
@@ -55,17 +57,17 @@ export default new Router({
       //     }
       // }
     },
-    {
-      path:'/campus',
-      name:'campus',
-      component: () => import('@/components/Campus'),
-
-
-    },{
-      path:'/fileStore',
-      name:'fileStore',
-      component: () => import('@/components/FileStore')
-    },
+    // {
+    //   path:'/campus',
+    //   name:'campus',
+    //   component: () => import('@/components/Campus'),
+    //
+    //
+    // },{
+    //   path:'/fileStore',
+    //   name:'fileStore',
+    //   component: () => import('@/components/FileStore')
+    // },
 
 
 
